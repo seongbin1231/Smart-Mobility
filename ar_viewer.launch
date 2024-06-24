@@ -1,0 +1,15 @@
+<launch>
+  <include file="$(find xycar_motor)/launch/xycar_motor.launch" />
+  <include file="/home/nvidia/xycar_ws/src/xycar_device/usb_cam/launch/xycar_cam.launch"/>
+  <include file="$(find xycar_lidar)/launch/xycar_lidar.launch" />
+  <node name="image_corrector" pkg="ar_viewer" type="image_corrector.py" output="screen" />
+
+  <node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
+    <param name="marker_size" type="double" value="12" />
+    <param name="max_new_marker_error" type="double" value="0.05" />
+    <param name="max_track_error" type="double" value="0.05" />
+    <param name="output_frame" type="string" value="usb_cam" />
+    <remap from="camera_image" to="/usb_cam/image_corrected" />
+    <remap from="camera_info" to="/usb_cam/camera_info" />
+  </node>
+</launch>
