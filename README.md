@@ -25,13 +25,13 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
    <div align="center">
      <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/98b582a2-b6d5-40a7-be04-629a7332c9e0" alt="한 줄 주행" width="500" style="margin-bottom:20px"/>
    </div>
-   - 급커브 구간에서 차선 하나가 없는 상황에서도 반대편 차선을 인식하여 주행합니다.
+   - 급커브 구간에서 차선 하나가 없는 상황에서 반대편 차선을 인식하여 주행시킵니다.
 
 3. **장애물 구간**<br>
    <div align="center">
      <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/1171ea38-a0b0-4284-a001-9a0b33a31e20" alt="장애물 구간" width="500" style="margin-bottom:20px"/>
    </div>
-   - 좌/우에 설치된 블록 장애물을 라이다 또는 카메라 센서로 인식하여 회피 주행합니다.
+   - 좌/우에 차례대로 설치된 블록 장애물을 라이다/이미지 센서로 인식하여 회피 주행시킵니다.
 
 4. **터널 구간**<br>
    <div align="center">
@@ -43,19 +43,19 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
    <div align="center">
      <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/1a8b06ae-94de-4f7b-90d5-6312f36f67d9" alt="횡단보도" width="500" style="margin-bottom:20px"/>
    </div>
-   - 신호등에 맞게 횡단보도를 안전하게 주행합니다.
+   - Single traffic 신호에 맞게 횡단보도를 주행합니다.
 
 6. **갈림길 구간**<br>
    <div align="center">
      <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/d81b88ef-a06f-4e18-8375-f4e58b358e5d" alt="갈림길 구간" width="500" style="margin-bottom:20px"/>
    </div>
-   - 갈림길 구간에서 최적의 길을 선택하여 주행하며, 횡단보도에서는 각 신호에 맞게 주행합니다.
+   - 갈림길 구간에서 Cross load traffic 신호를 바탕으로 좌/우 갈림길 중 최적의 길을 선택하여 주행합니다. 이때 횡단보도에서는 각 신호에 맞게 주행할 수 있도록 합니다.
 
 7. **주차 구간**<br>
    <div align="center">
      <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/0258adf9-cc45-4d27-854f-7ca9708e8376" alt="주차 구간" width="500" style="margin-bottom:20px"/>
    </div>
-   - AR 태그를 이용하여 사각형 구간 내에 정확하게 차량을 주차합니다.
+   - AR 태그를 이용하여 사각형 구간 내에 정확하게 차량을 주차시킵니다.
 
 ---
 
