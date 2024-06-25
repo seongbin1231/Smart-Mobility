@@ -12,4 +12,10 @@
 ### 7. 주차 구간
 
 # 주행 영상
-> https://youtube.com/shorts/uRC0T9Ergz4
+>  * https://youtube.com/shorts/uRC0T9Ergz4
+
+# Collaborators
+### * 정훈(팀장): <h12365@uos.ac.kr>
+### * 전현욱: <hyunwook6457@gmail.com>
+### * 유승원: <youseungwon1013@gmail.com>
+### * 조성빈: <czy4051@uos.ac.kr>
