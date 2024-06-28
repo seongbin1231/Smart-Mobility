@@ -43,13 +43,14 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 </div>
 - 좌/우에 설치된 블록 장애물을 라이다와 이미지 센서로 인식하여 회피 주행합니다.
 <div align="center">
-   <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/55630fb9-7b8f-40ab-9189-ed3000635c60" alt="장애물 구간" width="300" style="margin-bottom:20px"/>
+   <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/4ca5483b-0f4a-4e44-835c-83640b214faf" alt="장애물 구간" width="300" style="margin-bottom:20px"/>
 </div>
 
 **적용 알고리즘**: 장애물 회피는 라이다 센서로 인식된 데이터를 기반으로 기구학 모델을 적용하여 수행됩니다. 회피 조건이 만족되면, 정의된 회피 조향각을 명령으로 주행합니다.
 <div align="center">
-   <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/4ca5483b-0f4a-4e44-835c-83640b214faf" alt="장애물 구간" width="300" style="margin-bottom:20px"/>
+   <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/55630fb9-7b8f-40ab-9189-ed3000635c60" alt="장애물 구간" width="300" style="margin-bottom:20px"/>
 </div>
+
 
 ### 4. 터널 구간
 <div align="center">
