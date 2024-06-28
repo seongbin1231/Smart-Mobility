@@ -7,15 +7,15 @@
 
 ---
 
-## 프로젝트 소개
+# 프로젝트 소개
 
 Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양한 주행 환경을 안전하고 정확하게 주행할 수 있도록 설계되었습니다. 이 프로젝트에서는 ROS와 OpenCV를 활용하여 자율 주행 알고리즘을 구현하고, 각 미션에 적합한 센서를 효과적으로 활용하는 것을 중점으로 합니다.
 
 ---
 
-## 미션 및 알고리즘 소개
+# 미션 및 알고리즘 소개
 
-### 1. 곡선 주행
+## 1. 곡선 주행
 <div align="center">
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/5b441a9a-2d2f-44f3-b861-6c997c275ae5" alt="곡선 주행" width="500" style="margin-bottom:20px"/>
 </div>
@@ -26,7 +26,7 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 
 **적용 알고리즘**: Hough 선 검출을 사용하여 양쪽 차선을 인식합니다. 각 구역에서 여러 차선들을 하나의 대표 직선으로 표현한 후, 특정 y 값에서의 x 값을 도출합니다. 이 두 x 값을 평균하여 화면 중앙과의 차이를 에러로 정의합니다. 이 에러를 PID 제어에 사용하여 주행을 조정합니다. 곡선에서 PID를 적절하게 조정하면 곡선 주행도 안전하게 수행할 수 있었습니다.
 
-### 2. 한 줄 주행
+## 2. 한 줄 주행
 <div align="center">
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/98b582a2-b6d5-40a7-be04-629a7332c9e0" alt="한 줄 주행" width="500" style="margin-bottom:20px"/>
 </div>
@@ -37,7 +37,7 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 
 **적용 알고리즘**: 한 줄 주행에서는 양쪽 차선이 검출되지 않는 상황을 고려하여, 연속된 제어 주기 동안 차선이 검출되지 않으면 조향각을 왼쪽으로 설정하여 주행합니다.
 
-### 3. 장애물 구간
+## 3. 장애물 구간
 <div align="center">
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/1171ea38-a0b0-4284-a001-9a0b33a31e20" alt="장애물 구간" width="500" style="margin-bottom:20px"/>
 </div>
@@ -51,8 +51,7 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/55630fb9-7b8f-40ab-9189-ed3000635c60" alt="장애물 구간" width="300" style="margin-bottom:20px"/>
 </div>
 
-
-### 4. 터널 구간
+## 4. 터널 구간
 <div align="center">
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/1352d129-a3e5-4388-b9dc-118154c5bf00" alt="터널 구간" width="500" style="margin-bottom:20px"/>
 </div>
@@ -64,7 +63,7 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 
 **적용 알고리즘**: 터널 주행은 라이다를 이용해 오른쪽 벽과의 거리를 유지하며 주행합니다. 라이다 값의 평균이 일정 임계값을 유지하도록 PID 제어를 통해 조정하며, 전방 라이다 값에 대한 민감도를 줄이기 위해 sin 가중치를 적용합니다.
 
-### 5. 횡단보도
+## 5. 횡단보도
 <div align="center">
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/1a8b06ae-94de-4f7b-90d5-6312f36f67d9" alt="횡단보도" width="500" style="margin-bottom:20px"/>
 </div>
@@ -72,7 +71,7 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 
 **적용 알고리즘**: 카메라 이미지에서 도로 영역을 ROI로 설정하고, 이진화를 통해 밝기에 따른 정지선을 인식합니다. OpenCV의 non_zero_count 함수를 사용하여 흰색 면적이 임계값 이상일 경우 정지선으로 인식하며, 신호등이 빨간색이나 노란색일 때는 정지하도록 설정합니다.
 
-### 6. 갈림길 구간
+## 6. 갈림길 구간
 <div align="center">
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/d81b88ef-a06f-4e18-8375-f4e58b358e5d" alt="갈림길 구간" width="500" style="margin-bottom:20px"/>
 </div>
@@ -83,7 +82,7 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 
 **적용 알고리즘**: AR 태그 인식 후 횡단보도 구간까지 도달하는 시간을 고려하여, 빨간색 신호가 지속되는 시간을 기준으로 최적의 차선을 선택하여 주행합니다. 빨간색 신호가 4초보다 길 경우 해당 차선으로 주행하며, 짧을 경우 반대 차선으로 이동하여 최대 3초 동안 정차 후 주행합니다.
 
-### 7. 주차 구간
+## 7. 주차 구간
 <div align="center">
    <img src="https://github.com/seongbin1231/Smart-Mobility/assets/100406734/0258adf9-cc45-4d27-854f-7ca9708e8376" alt="주차 구간" width="500" style="margin-bottom:20px"/>
 </div>
@@ -96,13 +95,13 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 
 ---
 
-## 주행 영상
+# 주행 영상
 
 > [주행 영상 보기](https://youtube.com/shorts/uRC0T9Ergz4)
 
 ---
 
-## Collaborators
+# Collaborators
 
 - **정훈(Leader)**: [h12365@uos.ac.kr](mailto:h12365@uos.ac.kr)
 - **전현욱**: [hyunwook6457@gmail.com](mailto:hyunwook6457@gmail.com)
