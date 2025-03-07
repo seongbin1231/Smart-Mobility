@@ -104,6 +104,7 @@ Smart-Mobility 프로젝트는 Xycar 자율주행 플랫폼을 이용해 다양�
 # Collaborators
 
 - **정훈(Leader)**: [h12365@uos.ac.kr](mailto:h12365@uos.ac.kr)
+- **조성빈**: [czy4051@uos.ac.kr](mailto:czy4051@uos.ac.kr)
 - **전현욱**: [hyunwook6457@gmail.com](mailto:hyunwook6457@gmail.com)
 - **유승원**: [youseungwon1013@gmail.com](mailto:youseungwon1013@gmail.com)
-- **조성빈**: [czy4051@uos.ac.kr](mailto:czy4051@uos.ac.kr)
+
